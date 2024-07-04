@@ -1,0 +1,16 @@
+.pagination-custom {
+    margin-top: 20px; /* Ejemplo de estilo para el paginador */
+}
+
+.table-custom {
+    font-size: 14px; /* Ejemplo de estilo para la tabla */
+    /* Otros estilos personalizados para la tabla */
+}
+
+.table-custom th,
+.table-custom td {
+    /* Estilos para las celdas de la tabla */
+}
+.text-sm{
+    font-size: 13px;
+}
