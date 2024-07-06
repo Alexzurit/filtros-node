@@ -10,6 +10,7 @@
 .table-custom th,
 .table-custom td {
     /* Estilos para las celdas de la tabla */
+    border-color: blue;
 }
 .text-sm{
     font-size: 13px;
