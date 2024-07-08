@@ -10,7 +10,6 @@ const Filtro = () => {
     const pagesToShow = 5; // Número de páginas a mostrar en el paginador
     const [filterType, setFilterType] = useState(''); // Estado para el filtro de TYPE
     const [filterApplication, setFilterApplication] = useState(''); // Estado para el filtro de APPLICATION
-    const [filterProtocol, setFilterProtocol] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -52,8 +51,7 @@ const Filtro = () => {
     // Filtra los datos basado en los filtros seleccionados
     const filteredData = data.filter(item => 
         (filterType ? item.TYPE === filterType : true) &&
-        (filterApplication ? item.APPLICATION === filterApplication : true)&&
-        (filterProtocol ? item.PROTOCOL === filterProtocol: true)
+        (filterApplication ? item.APPLICATION === filterApplication : true)
     );
 
     const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
@@ -104,15 +102,6 @@ const Filtro = () => {
                             <Form.Control as="select" onChange={handleFilterApplicationChange}>
                                 <option value="">Mostrar Todo</option>
                                 {getUniqueValues('APPLICATION').map((category, index) => (
-                                    <option key={index} value={category}>{category}</option>
-                                ))}
-                            </Form.Control>
-                        </Form.Group>
-                        <Form.Group controlId="filterProtocolSelect" className="ml-3">
-                            <Form.Label>Filtrar por Protocolo:</Form.Label>
-                            <Form.Control as="select" onChange={handleFilterApplicationChange}>
-                                <option value="">Mostrar Todo</option>
-                                {getUniqueValues('PROTOCOL').map((category, index) => (
                                     <option key={index} value={category}>{category}</option>
                                 ))}
                             </Form.Control>

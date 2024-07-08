@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // import {Persona} from "./components/rutas";
 
 import './App.css';
-import { Persona, Animal, Filtro } from "./components/rutas";
+import { Persona, Animal, Filtro, Dashboard } from "./components/rutas";
 function App() {
     return (
         <Router>
@@ -39,6 +39,9 @@ function App() {
                                         <li>
                                         <Link to="/filtro" className="nav-link px-0"> <span className="d-none d-sm-inline">Filtros</span></Link>
                                         </li>
+                                        <li>
+                                        <Link to="/dashboard" className="nav-link px-0"> <span className="d-none d-sm-inline">DASH</span></Link>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -63,6 +66,7 @@ function App() {
                             <Route path="/persona" element={<Persona />} />
                             <Route path="/animal" element={<Animal />} />
                             <Route path="/filtro" element={<Filtro />} />
+                            <Route path="/dashboard" element={<Dashboard />} />
                         </Routes>
                     </div>
                 </div>

@@ -1,8 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-//const sql = require('mssql');
-//const sqlConfig = require('../database/connectionSQL');
 const routes = require('./routes');
 const port = 3001; // Puedes cambiar el puerto si es necesario
 
