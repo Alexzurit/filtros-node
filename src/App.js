@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 import './App.css';
 import { Persona, Animal, Filtro, Dashboard } from "./components/rutas";
+import Orders from "./components/Orders/Orders";
 function App() {
     return (
         <Router>
@@ -22,9 +23,12 @@ function App() {
                                         <i className="fs-4 bi-house"></i> <span className="ms-1 d-none d-sm-inline">Home</span>
                                     </a>
                                 </li>
-                                <li>
+                                {/*<li>
                                     <a href="/" className="nav-link px-0 align-middle">
                                         <i className="fs-4 bi-table"></i> <span className="ms-1 d-none d-sm-inline">Orders</span></a>
+                                </li>*/}
+                                <li>
+                                    <Link to="/orders" className="nav-link px-0 align-middle"><i className="fs-4 bi-table"></i><span className="ms-1 d-none d-sm-inline">PruebaModel</span></Link>
                                 </li>
                                 <li>
                                     <a href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle ">
@@ -67,6 +71,7 @@ function App() {
                             <Route path="/animal" element={<Animal />} />
                             <Route path="/filtro" element={<Filtro />} />
                             <Route path="/dashboard" element={<Dashboard />} />
+                            <Route path="/orders" element={<Orders />} />
                         </Routes>
                     </div>
                 </div>
